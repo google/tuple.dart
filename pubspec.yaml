@@ -1,0 +1,13 @@
+name: tuple
+version: 1.0.1
+authors:
+- Boris Kaul <localvoid@gmail.com>
+- Kwang Yul Seo <kwangyul.seo@gmail.com>
+description: Tuple data structure
+homepage: https://github.com/kseo/tuple
+environment:
+  sdk: '>=1.6.0'
+dependencies:
+  quiver_hashcode: '>=1.0.0-dev.1 <1.1.0'
+dev_dependencies:
+  test: any

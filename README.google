@@ -6,6 +6,7 @@ Date: October 29, 2016
 License: BSD 2-clause "Simplified" License
 
 Description:
-This directory contains the tuple package as downloaded from
-https://github.com/kseo/tuple/archive/v1.0.1.tar.gz on June
-13, 2017.
+This directory contains the tuple package as checked
+out from git@github.com:kseo/tuple.git at tag v1.0.1
+on June 13, 2017.
+
