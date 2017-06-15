@@ -8,6 +8,6 @@ homepage: https://github.com/kseo/tuple
 environment:
   sdk: '>=1.6.0'
 dependencies:
-  quiver_hashcode: '>=1.0.0-dev.1 <1.1.0'
+  quiver: '>=0.22.0 <0.23.0'
 dev_dependencies:
   test: any

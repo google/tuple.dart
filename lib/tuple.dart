@@ -22,6 +22,6 @@
 /// ```
 library tuple;
 
-import 'package:quiver_hashcode/hashcode.dart';
+import 'package:quiver/core.dart';
 
 part 'package:tuple/src/tuple.dart';
