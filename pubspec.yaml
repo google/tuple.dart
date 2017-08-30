@@ -3,8 +3,9 @@ version: 1.0.1
 authors:
 - Boris Kaul <localvoid@gmail.com>
 - Kwang Yul Seo <kwangyul.seo@gmail.com>
+- Nelson Brochado <nelson.brochado@outlook.com>
 description: Tuple data structure
-homepage: https://github.com/kseo/tuple
+homepage: https://github.com/dart-lang/tuple
 environment:
   sdk: '>=1.6.0'
 dependencies:
