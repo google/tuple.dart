@@ -4,7 +4,7 @@
 
 /// # Tuple data structure
 ///
-/// - [Tuple2], [Tuple3]...
+/// - [Tuple2], [Tuple3], [Tuple4], [Tuple5], [Tuple6], [Tuple7]
 ///
 /// ## Usage example
 ///

@@ -1,3 +1,6 @@
+#### 1.0.2
+  * Fixed a bug in Tuple7: implementation of operator == was buggy.
+
 #### 1.0.1
    * Fix all strong-mode warnings and errors.
 
