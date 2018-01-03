@@ -1,5 +1,5 @@
 name: tuple
-version: 1.0.1
+version: 1.0.1+1
 authors:
 - Boris Kaul <localvoid@gmail.com>
 - Kwang Yul Seo <kwangyul.seo@gmail.com>
@@ -8,6 +8,6 @@ homepage: https://github.com/kseo/tuple
 environment:
   sdk: '>=1.6.0'
 dependencies:
-  quiver: '>=0.22.0 <0.23.0'
+  quiver: '>=0.22.0 <0.28.0'
 dev_dependencies:
   test: any
