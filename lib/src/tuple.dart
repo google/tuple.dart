@@ -166,7 +166,8 @@ class Tuple4<T1, T2, T3, T4> {
   String toString() => '[$item1, $item2, $item3, $item4]';
 
   @override
-  bool operator ==(o) => o is Tuple4 &&
+  bool operator ==(o) =>
+      o is Tuple4 &&
       o.item1 == item1 &&
       o.item2 == item2 &&
       o.item3 == item3 &&
@@ -243,7 +244,8 @@ class Tuple5<T1, T2, T3, T4, T5> {
   String toString() => '[$item1, $item2, $item3, $item4, $item5]';
 
   @override
-  bool operator ==(o) => o is Tuple5 &&
+  bool operator ==(o) =>
+      o is Tuple5 &&
       o.item1 == item1 &&
       o.item2 == item2 &&
       o.item3 == item3 &&
@@ -342,7 +344,8 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
   String toString() => '[$item1, $item2, $item3, $item4, $item5, $item6]';
 
   @override
-  bool operator ==(o) => o is Tuple6 &&
+  bool operator ==(o) =>
+      o is Tuple6 &&
       o.item1 == item1 &&
       o.item2 == item2 &&
       o.item3 == item3 &&
@@ -459,7 +462,8 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
       '[$item1, $item2, $item3, $item4, $item5, $item6, $item7]';
 
   @override
-  bool operator ==(o) => o is Tuple7 &&
+  bool operator ==(o) =>
+      o is Tuple7 &&
       o.item1 == item1 &&
       o.item2 == item2 &&
       o.item3 == item3 &&

@@ -26,8 +26,10 @@ main() {
       expect(t1.item1, equals(1));
       expect(t1.item2, equals(true));
 
-      expect(() => new Tuple2.fromList([1]), throwsA(new isInstanceOf<ArgumentError>()));
-      expect(() => new Tuple2.fromList([1, true, 'a']), throwsA(new isInstanceOf<ArgumentError>()));
+      expect(() => new Tuple2.fromList([1]),
+          throwsA(new isInstanceOf<ArgumentError>()));
+      expect(() => new Tuple2.fromList([1, true, 'a']),
+          throwsA(new isInstanceOf<ArgumentError>()));
     });
 
     test('equality', () {

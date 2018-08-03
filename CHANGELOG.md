@@ -1,3 +1,6 @@
+#### 1.0.2
+   * Prepare for Dart 2 stable.
+
 #### 1.0.1
    * Fix all strong-mode warnings and errors.
 
