@@ -1,9 +1,4 @@
-# Tuple data structure
-
-- [Tuple2], [Tuple3]...
-
-[![Build Status](https://travis-ci.org/kseo/tuple.svg)](https://travis-ci.org/kseo/tuple)
-[![Coverage Status](https://coveralls.io/repos/kseo/tuple/badge.svg?branch=master&service=github)](https://coveralls.io/github/kseo/tuple?branch=master)
+[![Build Status](https://travis-ci.org/dart-lang/tuple.svg)](https://travis-ci.org/dart-lang/tuple/)
 
 ## Usage example
 

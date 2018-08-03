@@ -1,8 +1,24 @@
 language: dart
-sudo: false
+
 dart:
   - stable
   - dev
-script: ./tool/travis.sh
-env:
-  - DARTANALYZER_FLAGS=--fatal-warnings
+  - 1.24.3
+
+dart_task:
+  - test:
+  - dartanalyzer
+
+matrix:
+  include:
+  # Only validate formatting using the dev release
+  - dart: dev
+    dart_task: dartfmt
+
+# Only building master means that we don't run two builds for each pull request.
+branches:
+  only: [master]
+
+cache:
+  directories:
+  - $HOME/.pub-cache
