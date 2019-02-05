@@ -38,7 +38,7 @@ class Tuple2<T1, T2> {
   ///
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
-  List toList({bool growable: false}) =>
+  List toList({bool growable = false}) =>
       new List.from([item1, item2], growable: growable);
 
   @override
@@ -94,7 +94,7 @@ class Tuple3<T1, T2, T3> {
   ///
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
-  List toList({bool growable: false}) =>
+  List toList({bool growable = false}) =>
       new List.from([item1, item2, item3], growable: growable);
 
   @override
@@ -159,7 +159,7 @@ class Tuple4<T1, T2, T3, T4> {
   ///
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
-  List toList({bool growable: false}) =>
+  List toList({bool growable = false}) =>
       new List.from([item1, item2, item3, item4], growable: growable);
 
   @override
@@ -237,7 +237,7 @@ class Tuple5<T1, T2, T3, T4, T5> {
   ///
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
-  List toList({bool growable: false}) =>
+  List toList({bool growable = false}) =>
       new List.from([item1, item2, item3, item4, item5], growable: growable);
 
   @override
@@ -336,7 +336,7 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
   ///
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
-  List toList({bool growable: false}) =>
+  List toList({bool growable = false}) =>
       new List.from([item1, item2, item3, item4, item5, item6],
           growable: growable);
 
@@ -453,7 +453,7 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
   ///
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
-  List toList({bool growable: false}) =>
+  List toList({bool growable = false}) =>
       new List.from([item1, item2, item3, item4, item5, item6, item7],
           growable: growable);
 
