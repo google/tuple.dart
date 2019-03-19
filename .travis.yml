@@ -1,13 +1,12 @@
 language: dart
 
 dart:
-  - stable
+  - 2.0.0
   - dev
-  - 1.24.3
 
 dart_task:
   - test:
-  - dartanalyzer
+  - dartanalyzer: --fatal-infos --fatal-warnings .
 
 matrix:
   include:

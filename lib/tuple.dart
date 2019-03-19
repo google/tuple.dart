@@ -38,20 +38,20 @@ class Tuple2<T1, T2> {
   /// Create a new tuple value with the specified list [items].
   factory Tuple2.fromList(List items) {
     if (items.length != 2) {
-      throw new ArgumentError('items must have length 2');
+      throw ArgumentError('items must have length 2');
     }
 
-    return new Tuple2<T1, T2>(items[0] as T1, items[1] as T2);
+    return Tuple2<T1, T2>(items[0] as T1, items[1] as T2);
   }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple2<T1, T2> withItem1(T1 v) {
-    return new Tuple2<T1, T2>(v, item2);
+    return Tuple2<T1, T2>(v, item2);
   }
 
   /// Returns a tuple with the second item set to the specified value.
   Tuple2<T1, T2> withItem2(T2 v) {
-    return new Tuple2<T1, T2>(item1, v);
+    return Tuple2<T1, T2>(item1, v);
   }
 
   /// Creates a [List] containing the items of this [Tuple2].
@@ -59,13 +59,14 @@ class Tuple2<T1, T2> {
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
   List toList({bool growable = false}) =>
-      new List.from([item1, item2], growable: growable);
+      List.from([item1, item2], growable: growable);
 
   @override
   String toString() => '[$item1, $item2]';
 
   @override
-  bool operator ==(o) => o is Tuple2 && o.item1 == item1 && o.item2 == item2;
+  bool operator ==(other) =>
+      other is Tuple2 && other.item1 == item1 && other.item2 == item2;
 
   @override
   int get hashCode => hash2(item1.hashCode, item2.hashCode);
@@ -88,26 +89,25 @@ class Tuple3<T1, T2, T3> {
   /// Create a new tuple value with the specified list [items].
   factory Tuple3.fromList(List items) {
     if (items.length != 3) {
-      throw new ArgumentError('items must have length 3');
+      throw ArgumentError('items must have length 3');
     }
 
-    return new Tuple3<T1, T2, T3>(
-        items[0] as T1, items[1] as T2, items[2] as T3);
+    return Tuple3<T1, T2, T3>(items[0] as T1, items[1] as T2, items[2] as T3);
   }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple3<T1, T2, T3> withItem1(T1 v) {
-    return new Tuple3<T1, T2, T3>(v, item2, item3);
+    return Tuple3<T1, T2, T3>(v, item2, item3);
   }
 
   /// Returns a tuple with the second item set to the specified value.
   Tuple3<T1, T2, T3> withItem2(T2 v) {
-    return new Tuple3<T1, T2, T3>(item1, v, item3);
+    return Tuple3<T1, T2, T3>(item1, v, item3);
   }
 
   /// Returns a tuple with the third item set to the specified value.
   Tuple3<T1, T2, T3> withItem3(T3 v) {
-    return new Tuple3<T1, T2, T3>(item1, item2, v);
+    return Tuple3<T1, T2, T3>(item1, item2, v);
   }
 
   /// Creates a [List] containing the items of this [Tuple3].
@@ -115,14 +115,17 @@ class Tuple3<T1, T2, T3> {
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
   List toList({bool growable = false}) =>
-      new List.from([item1, item2, item3], growable: growable);
+      List.from([item1, item2, item3], growable: growable);
 
   @override
   String toString() => '[$item1, $item2, $item3]';
 
   @override
-  bool operator ==(o) =>
-      o is Tuple3 && o.item1 == item1 && o.item2 == item2 && o.item3 == item3;
+  bool operator ==(other) =>
+      other is Tuple3 &&
+      other.item1 == item1 &&
+      other.item2 == item2 &&
+      other.item3 == item3;
 
   @override
   int get hashCode => hash3(item1.hashCode, item2.hashCode, item3.hashCode);
@@ -148,31 +151,31 @@ class Tuple4<T1, T2, T3, T4> {
   /// Create a new tuple value with the specified list [items].
   factory Tuple4.fromList(List items) {
     if (items.length != 4) {
-      throw new ArgumentError('items must have length 4');
+      throw ArgumentError('items must have length 4');
     }
 
-    return new Tuple4<T1, T2, T3, T4>(
+    return Tuple4<T1, T2, T3, T4>(
         items[0] as T1, items[1] as T2, items[2] as T3, items[3] as T4);
   }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple4<T1, T2, T3, T4> withItem1(T1 v) {
-    return new Tuple4<T1, T2, T3, T4>(v, item2, item3, item4);
+    return Tuple4<T1, T2, T3, T4>(v, item2, item3, item4);
   }
 
   /// Returns a tuple with the second item set to the specified value.
   Tuple4<T1, T2, T3, T4> withItem2(T2 v) {
-    return new Tuple4<T1, T2, T3, T4>(item1, v, item3, item4);
+    return Tuple4<T1, T2, T3, T4>(item1, v, item3, item4);
   }
 
   /// Returns a tuple with the third item set to the specified value.
   Tuple4<T1, T2, T3, T4> withItem3(T3 v) {
-    return new Tuple4<T1, T2, T3, T4>(item1, item2, v, item4);
+    return Tuple4<T1, T2, T3, T4>(item1, item2, v, item4);
   }
 
   /// Returns a tuple with the fourth item set to the specified value.
   Tuple4<T1, T2, T3, T4> withItem4(T4 v) {
-    return new Tuple4<T1, T2, T3, T4>(item1, item2, item3, v);
+    return Tuple4<T1, T2, T3, T4>(item1, item2, item3, v);
   }
 
   /// Creates a [List] containing the items of this [Tuple4].
@@ -180,18 +183,18 @@ class Tuple4<T1, T2, T3, T4> {
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
   List toList({bool growable = false}) =>
-      new List.from([item1, item2, item3, item4], growable: growable);
+      List.from([item1, item2, item3, item4], growable: growable);
 
   @override
   String toString() => '[$item1, $item2, $item3, $item4]';
 
   @override
-  bool operator ==(o) =>
-      o is Tuple4 &&
-      o.item1 == item1 &&
-      o.item2 == item2 &&
-      o.item3 == item3 &&
-      o.item4 == item4;
+  bool operator ==(other) =>
+      other is Tuple4 &&
+      other.item1 == item1 &&
+      other.item2 == item2 &&
+      other.item3 == item3 &&
+      other.item4 == item4;
 
   @override
   int get hashCode =>
@@ -221,36 +224,36 @@ class Tuple5<T1, T2, T3, T4, T5> {
   /// Create a new tuple value with the specified list [items].
   factory Tuple5.fromList(List items) {
     if (items.length != 5) {
-      throw new ArgumentError('items must have length 5');
+      throw ArgumentError('items must have length 5');
     }
 
-    return new Tuple5<T1, T2, T3, T4, T5>(items[0] as T1, items[1] as T2,
+    return Tuple5<T1, T2, T3, T4, T5>(items[0] as T1, items[1] as T2,
         items[2] as T3, items[3] as T4, items[4] as T5);
   }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple5<T1, T2, T3, T4, T5> withItem1(T1 v) {
-    return new Tuple5<T1, T2, T3, T4, T5>(v, item2, item3, item4, item5);
+    return Tuple5<T1, T2, T3, T4, T5>(v, item2, item3, item4, item5);
   }
 
   /// Returns a tuple with the second item set to the specified value.
   Tuple5<T1, T2, T3, T4, T5> withItem2(T2 v) {
-    return new Tuple5<T1, T2, T3, T4, T5>(item1, v, item3, item4, item5);
+    return Tuple5<T1, T2, T3, T4, T5>(item1, v, item3, item4, item5);
   }
 
   /// Returns a tuple with the third item set to the specified value.
   Tuple5<T1, T2, T3, T4, T5> withItem3(T3 v) {
-    return new Tuple5<T1, T2, T3, T4, T5>(item1, item2, v, item4, item5);
+    return Tuple5<T1, T2, T3, T4, T5>(item1, item2, v, item4, item5);
   }
 
   /// Returns a tuple with the fourth item set to the specified value.
   Tuple5<T1, T2, T3, T4, T5> withItem4(T4 v) {
-    return new Tuple5<T1, T2, T3, T4, T5>(item1, item2, item3, v, item5);
+    return Tuple5<T1, T2, T3, T4, T5>(item1, item2, item3, v, item5);
   }
 
   /// Returns a tuple with the fifth item set to the specified value.
   Tuple5<T1, T2, T3, T4, T5> withItem5(T5 v) {
-    return new Tuple5<T1, T2, T3, T4, T5>(item1, item2, item3, item4, v);
+    return Tuple5<T1, T2, T3, T4, T5>(item1, item2, item3, item4, v);
   }
 
   /// Creates a [List] containing the items of this [Tuple5].
@@ -258,19 +261,19 @@ class Tuple5<T1, T2, T3, T4, T5> {
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
   List toList({bool growable = false}) =>
-      new List.from([item1, item2, item3, item4, item5], growable: growable);
+      List.from([item1, item2, item3, item4, item5], growable: growable);
 
   @override
   String toString() => '[$item1, $item2, $item3, $item4, $item5]';
 
   @override
-  bool operator ==(o) =>
-      o is Tuple5 &&
-      o.item1 == item1 &&
-      o.item2 == item2 &&
-      o.item3 == item3 &&
-      o.item4 == item4 &&
-      o.item5 == item5;
+  bool operator ==(other) =>
+      other is Tuple5 &&
+      other.item1 == item1 &&
+      other.item2 == item2 &&
+      other.item3 == item3 &&
+      other.item4 == item4 &&
+      other.item5 == item5;
 
   @override
   int get hashCode => hashObjects([
@@ -309,47 +312,41 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
   /// Create a new tuple value with the specified list [items].
   factory Tuple6.fromList(List items) {
     if (items.length != 6) {
-      throw new ArgumentError('items must have length 6');
+      throw ArgumentError('items must have length 6');
     }
 
-    return new Tuple6<T1, T2, T3, T4, T5, T6>(items[0] as T1, items[1] as T2,
+    return Tuple6<T1, T2, T3, T4, T5, T6>(items[0] as T1, items[1] as T2,
         items[2] as T3, items[3] as T4, items[4] as T5, items[5] as T6);
   }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple6<T1, T2, T3, T4, T5, T6> withItem1(T1 v) {
-    return new Tuple6<T1, T2, T3, T4, T5, T6>(
-        v, item2, item3, item4, item5, item6);
+    return Tuple6<T1, T2, T3, T4, T5, T6>(v, item2, item3, item4, item5, item6);
   }
 
   /// Returns a tuple with the second item set to the specified value.
   Tuple6<T1, T2, T3, T4, T5, T6> withItem2(T2 v) {
-    return new Tuple6<T1, T2, T3, T4, T5, T6>(
-        item1, v, item3, item4, item5, item6);
+    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, v, item3, item4, item5, item6);
   }
 
   /// Returns a tuple with the third item set to the specified value.
   Tuple6<T1, T2, T3, T4, T5, T6> withItem3(T3 v) {
-    return new Tuple6<T1, T2, T3, T4, T5, T6>(
-        item1, item2, v, item4, item5, item6);
+    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, v, item4, item5, item6);
   }
 
   /// Returns a tuple with the fourth item set to the specified value.
   Tuple6<T1, T2, T3, T4, T5, T6> withItem4(T4 v) {
-    return new Tuple6<T1, T2, T3, T4, T5, T6>(
-        item1, item2, item3, v, item5, item6);
+    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, item3, v, item5, item6);
   }
 
   /// Returns a tuple with the fifth item set to the specified value.
   Tuple6<T1, T2, T3, T4, T5, T6> withItem5(T5 v) {
-    return new Tuple6<T1, T2, T3, T4, T5, T6>(
-        item1, item2, item3, item4, v, item6);
+    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, item3, item4, v, item6);
   }
 
   /// Returns a tuple with the sixth item set to the specified value.
   Tuple6<T1, T2, T3, T4, T5, T6> withItem6(T6 v) {
-    return new Tuple6<T1, T2, T3, T4, T5, T6>(
-        item1, item2, item3, item4, item5, v);
+    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, item3, item4, item5, v);
   }
 
   /// Creates a [List] containing the items of this [Tuple5].
@@ -357,21 +354,20 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
   List toList({bool growable = false}) =>
-      new List.from([item1, item2, item3, item4, item5, item6],
-          growable: growable);
+      List.from([item1, item2, item3, item4, item5, item6], growable: growable);
 
   @override
   String toString() => '[$item1, $item2, $item3, $item4, $item5, $item6]';
 
   @override
-  bool operator ==(o) =>
-      o is Tuple6 &&
-      o.item1 == item1 &&
-      o.item2 == item2 &&
-      o.item3 == item3 &&
-      o.item4 == item4 &&
-      o.item5 == item5 &&
-      o.item6 == item6;
+  bool operator ==(other) =>
+      other is Tuple6 &&
+      other.item1 == item1 &&
+      other.item2 == item2 &&
+      other.item3 == item3 &&
+      other.item4 == item4 &&
+      other.item5 == item5 &&
+      other.item6 == item6;
 
   @override
   int get hashCode => hashObjects([
@@ -414,10 +410,10 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
   /// Create a new tuple value with the specified list [items].
   factory Tuple7.fromList(List items) {
     if (items.length != 7) {
-      throw new ArgumentError('items must have length 7');
+      throw ArgumentError('items must have length 7');
     }
 
-    return new Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
         items[0] as T1,
         items[1] as T2,
         items[2] as T3,
@@ -429,43 +425,43 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem1(T1 v) {
-    return new Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
         v, item2, item3, item4, item5, item6, item7);
   }
 
   /// Returns a tuple with the second item set to the specified value.
   Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem2(T2 v) {
-    return new Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
         item1, v, item3, item4, item5, item6, item7);
   }
 
   /// Returns a tuple with the third item set to the specified value.
   Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem3(T3 v) {
-    return new Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
         item1, item2, v, item4, item5, item6, item7);
   }
 
   /// Returns a tuple with the fourth item set to the specified value.
   Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem4(T4 v) {
-    return new Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
         item1, item2, item3, v, item5, item6, item7);
   }
 
   /// Returns a tuple with the fifth item set to the specified value.
   Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem5(T5 v) {
-    return new Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
         item1, item2, item3, item4, v, item6, item7);
   }
 
   /// Returns a tuple with the sixth item set to the specified value.
   Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem6(T6 v) {
-    return new Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
         item1, item2, item3, item4, item5, v, item7);
   }
 
   /// Returns a tuple with the seventh item set to the specified value.
   Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem7(T7 v) {
-    return new Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
         item1, item2, item3, item4, item5, item6, v);
   }
 
@@ -473,8 +469,8 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
   ///
   /// The elements are in item order. The list is variable-length
   /// if [growable] is true.
-  List toList({bool growable: false}) =>
-      new List.from([item1, item2, item3, item4, item5, item6, item7],
+  List toList({bool growable = false}) =>
+      List.from([item1, item2, item3, item4, item5, item6, item7],
           growable: growable);
 
   @override
@@ -482,15 +478,15 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
       '[$item1, $item2, $item3, $item4, $item5, $item6, $item7]';
 
   @override
-  bool operator ==(o) =>
-      o is Tuple7 &&
-      o.item1 == item1 &&
-      o.item2 == item2 &&
-      o.item3 == item3 &&
-      o.item4 == item4 &&
-      o.item5 == item5 &&
-      o.item5 == item6 &&
-      o.item6 == item7;
+  bool operator ==(other) =>
+      other is Tuple7 &&
+      other.item1 == item1 &&
+      other.item2 == item2 &&
+      other.item3 == item3 &&
+      other.item4 == item4 &&
+      other.item5 == item5 &&
+      other.item5 == item6 &&
+      other.item6 == item7;
 
   @override
   int get hashCode => hashObjects([
