@@ -27,9 +27,9 @@ main() {
       expect(t1.item2, equals(true));
 
       expect(() => new Tuple2.fromList([1]),
-          throwsA(new isInstanceOf<ArgumentError>()));
+          throwsA(new TypeMatcher<ArgumentError>()));
       expect(() => new Tuple2.fromList([1, true, 'a']),
-          throwsA(new isInstanceOf<ArgumentError>()));
+          throwsA(new TypeMatcher<ArgumentError>()));
     });
 
     test('equality', () {
@@ -58,7 +58,7 @@ main() {
 
     test('toList() should return a fixed list by default', () {
       expect(() => t.toList().add(3),
-          throwsA(new isInstanceOf<UnsupportedError>()));
+          throwsA(new TypeMatcher<UnsupportedError>()));
     });
 
     test('toList(growable: true) should return a growable list', () {
