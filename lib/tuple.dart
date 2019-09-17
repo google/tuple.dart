@@ -815,7 +815,7 @@ class Tuple10<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> {
   /// Create a new tuple value with the specified list [items].
   factory Tuple10.fromList(List items) {
     if (items.length != 10) {
-      throw ArgumentError('items must have length 9');
+      throw ArgumentError('items must have length 10');
     }
 
     return Tuple10<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(
@@ -974,7 +974,7 @@ class Tuple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
   /// Create a new tuple value with the specified list [items].
   factory Tuple11.fromList(List items) {
     if (items.length != 11) {
-      throw ArgumentError('items must have length 9');
+      throw ArgumentError('items must have length 11');
     }
 
     return Tuple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(
