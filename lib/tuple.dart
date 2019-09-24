@@ -22,6 +22,7 @@
 /// ```
 library tuple;
 
+import 'package:quiver/check.dart';
 import 'package:quiver/core.dart';
 
 /// Represents a 2-tuple, or pair.
@@ -37,10 +38,10 @@ class Tuple2<T1, T2> {
 
   /// Create a new tuple value with the specified list [items].
   factory Tuple2.fromList(List items) {
-    if (items.length != 2) {
-      throw ArgumentError('items must have length 2');
-    }
-
+    checkArgument(
+      identical(items?.length, 2),
+      message: 'items must have two values',
+    );
     return Tuple2<T1, T2>(items[0] as T1, items[1] as T2);
   }
 
@@ -66,7 +67,7 @@ class Tuple2<T1, T2> {
 
   @override
   bool operator ==(other) =>
-      other is Tuple2 && other.item1 == item1 && other.item2 == item2;
+      other is Tuple2<T1, T2> && other.item1 == item1 && other.item2 == item2;
 
   @override
   int get hashCode => hash2(item1.hashCode, item2.hashCode);
@@ -88,10 +89,8 @@ class Tuple3<T1, T2, T3> {
 
   /// Create a new tuple value with the specified list [items].
   factory Tuple3.fromList(List items) {
-    if (items.length != 3) {
-      throw ArgumentError('items must have length 3');
-    }
-
+    checkArgument(identical(items?.length, 3),
+        message: 'items must have three values');
     return Tuple3<T1, T2, T3>(items[0] as T1, items[1] as T2, items[2] as T3);
   }
 
@@ -122,7 +121,7 @@ class Tuple3<T1, T2, T3> {
 
   @override
   bool operator ==(other) =>
-      other is Tuple3 &&
+      other is Tuple3<T1, T2, T3> &&
       other.item1 == item1 &&
       other.item2 == item2 &&
       other.item3 == item3;
@@ -150,10 +149,8 @@ class Tuple4<T1, T2, T3, T4> {
 
   /// Create a new tuple value with the specified list [items].
   factory Tuple4.fromList(List items) {
-    if (items.length != 4) {
-      throw ArgumentError('items must have length 4');
-    }
-
+    checkArgument(identical(items?.length, 4),
+        message: 'items must have four values');
     return Tuple4<T1, T2, T3, T4>(
         items[0] as T1, items[1] as T2, items[2] as T3, items[3] as T4);
   }
@@ -190,7 +187,7 @@ class Tuple4<T1, T2, T3, T4> {
 
   @override
   bool operator ==(other) =>
-      other is Tuple4 &&
+      other is Tuple4<T1, T2, T3, T4> &&
       other.item1 == item1 &&
       other.item2 == item2 &&
       other.item3 == item3 &&
@@ -223,10 +220,10 @@ class Tuple5<T1, T2, T3, T4, T5> {
 
   /// Create a new tuple value with the specified list [items].
   factory Tuple5.fromList(List items) {
-    if (items.length != 5) {
-      throw ArgumentError('items must have length 5');
-    }
-
+    checkArgument(
+      identical(items?.length, 5),
+      message: 'items must have five values',
+    );
     return Tuple5<T1, T2, T3, T4, T5>(items[0] as T1, items[1] as T2,
         items[2] as T3, items[3] as T4, items[4] as T5);
   }
@@ -268,7 +265,7 @@ class Tuple5<T1, T2, T3, T4, T5> {
 
   @override
   bool operator ==(other) =>
-      other is Tuple5 &&
+      other is Tuple5<T1, T2, T3, T4, T5> &&
       other.item1 == item1 &&
       other.item2 == item2 &&
       other.item3 == item3 &&
@@ -311,10 +308,10 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
 
   /// Create a new tuple value with the specified list [items].
   factory Tuple6.fromList(List items) {
-    if (items.length != 6) {
-      throw ArgumentError('items must have length 6');
-    }
-
+    checkArgument(
+      identical(items?.length, 6),
+      message: 'items must have six values',
+    );
     return Tuple6<T1, T2, T3, T4, T5, T6>(items[0] as T1, items[1] as T2,
         items[2] as T3, items[3] as T4, items[4] as T5, items[5] as T6);
   }
@@ -361,7 +358,7 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
 
   @override
   bool operator ==(other) =>
-      other is Tuple6 &&
+      other is Tuple6<T1, T2, T3, T4, T5, T6> &&
       other.item1 == item1 &&
       other.item2 == item2 &&
       other.item3 == item3 &&
@@ -409,10 +406,10 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
 
   /// Create a new tuple value with the specified list [items].
   factory Tuple7.fromList(List items) {
-    if (items.length != 7) {
-      throw ArgumentError('items must have length 7');
-    }
-
+    checkArgument(
+      identical(items?.length, 7),
+      message: 'items must have seven values',
+    );
     return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
         items[0] as T1,
         items[1] as T2,
@@ -479,7 +476,7 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
 
   @override
   bool operator ==(other) =>
-      other is Tuple7 &&
+      other is Tuple7<T1, T2, T3, T4, T5, T6, T7> &&
       other.item1 == item1 &&
       other.item2 == item2 &&
       other.item3 == item3 &&
