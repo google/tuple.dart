@@ -485,8 +485,8 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
       other.item3 == item3 &&
       other.item4 == item4 &&
       other.item5 == item5 &&
-      other.item5 == item6 &&
-      other.item6 == item7;
+      other.item6 == item6 &&
+      other.item7 == item7;
 
   @override
   int get hashCode => hashObjects([
