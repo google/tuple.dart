@@ -83,18 +83,6 @@ void main() {
       expect(t == Tuple2<int, String>(2, 'b'), isFalse);
     });
 
-    test('does not equal when first type is different', () {
-      expect(t == Tuple2<double, String>(1.0, 'a'), isFalse);
-    });
-
-    test('does not equal when second type is different', () {
-      expect(t == Tuple2<int, double>(1, 1.0), isFalse);
-    });
-
-    test('does not equal when both types are different', () {
-      expect(t == Tuple2<double, int>(1.0, 1), isFalse);
-    });
-
     test('equals itself', () {
       expect(t == t, isTrue);
     });
@@ -204,18 +192,6 @@ void main() {
 
     test('does not equal when third value is different', () {
       expect(t == t.withItem3(100), isFalse);
-    });
-
-    test('does not equal when first type is different', () {
-      expect(t == Tuple3<double, String, int>(1.0, 'a', 10), isFalse);
-    });
-
-    test('does not equal when second type is different', () {
-      expect(t == Tuple3<int, double, int>(1, 1.0, 10), isFalse);
-    });
-
-    test('does not equal when third type is different', () {
-      expect(t == Tuple3<int, String, double>(1, 'a', 1.0), isFalse);
     });
 
     test('equals itself', () {
@@ -353,24 +329,6 @@ void main() {
 
     test('does not equal when fourth value is different', () {
       expect(t == t.withItem4('c'), isFalse);
-    });
-
-    test('does not equal when first type is different', () {
-      expect(
-          t == Tuple4<double, String, int, String>(1.0, 'a', 10, 'b'), isFalse);
-    });
-
-    test('does not equal when second type is different', () {
-      expect(t == Tuple4<int, double, int, String>(1, 1.0, 10, 'b'), isFalse);
-    });
-
-    test('does not equal when third type is different', () {
-      expect(
-          t == Tuple4<int, String, double, String>(1, 'a', 1.0, 'b'), isFalse);
-    });
-
-    test('does not equal when fourth type is different', () {
-      expect(t == Tuple4<int, String, int, double>(1, 'a', 10, 1.0), isFalse);
     });
 
     test('equals itself', () {
@@ -540,34 +498,6 @@ void main() {
 
     test('does not equal when fifth value is different', () {
       expect(t == t.withItem5(0), isFalse);
-    });
-
-    test('does not equal when first type is different', () {
-      expect(
-          t == Tuple5<double, String, int, String, int>(1.0, 'a', 10, 'b', 100),
-          isFalse);
-    });
-
-    test('does not equal when second type is different', () {
-      expect(t == Tuple5<int, double, int, String, int>(1, 1.0, 10, 'b', 100),
-          isFalse);
-    });
-
-    test('does not equal when third type is different', () {
-      expect(
-          t == Tuple5<int, String, double, String, int>(1, 'a', 1.0, 'b', 100),
-          isFalse);
-    });
-
-    test('does not equal when fourth type is different', () {
-      expect(t == Tuple5<int, String, int, double, int>(1, 'a', 10, 1.0, 100),
-          isFalse);
-    });
-
-    test('does not equal when fifth type is different', () {
-      expect(
-          t == Tuple5<int, String, int, String, double>(1, 'a', 10, 'b', 1.0),
-          isFalse);
     });
 
     test('equals itself', () {
@@ -781,54 +711,6 @@ void main() {
 
     test('does not equal when sixth value is different', () {
       expect(t == t.withItem6('z'), isFalse);
-    });
-
-    test('does not equal when first type is different', () {
-      expect(
-          t ==
-              Tuple6<double, String, int, String, int, String>(
-                  1.0, 'a', 10, 'b', 100, 'c'),
-          isFalse);
-    });
-
-    test('does not equal when second type is different', () {
-      expect(
-          t ==
-              Tuple6<int, double, int, String, int, String>(
-                  1, 1.0, 10, 'b', 100, 'c'),
-          isFalse);
-    });
-
-    test('does not equal when third type is different', () {
-      expect(
-          t ==
-              Tuple6<int, String, double, String, int, String>(
-                  1, 'a', 1.0, 'b', 100, 'c'),
-          isFalse);
-    });
-
-    test('does not equal when fourth type is different', () {
-      expect(
-          t ==
-              Tuple6<int, String, int, double, int, String>(
-                  1, 'a', 10, 1.0, 100, 'c'),
-          isFalse);
-    });
-
-    test('does not equal when fifth type is different', () {
-      expect(
-          t ==
-              Tuple6<int, String, int, String, double, String>(
-                  1, 'a', 10, 'b', 1.0, 'c'),
-          isFalse);
-    });
-
-    test('does not equal when sixth type is different', () {
-      expect(
-          t ==
-              Tuple6<int, String, int, String, int, double>(
-                  1, 'a', 10, 'b', 100, 0),
-          isFalse);
     });
 
     test('equals itself', () {
@@ -1077,62 +959,6 @@ void main() {
 
     test('does not equal when seventh value is different', () {
       expect(t == t.withItem7(0), isFalse);
-    });
-
-    test('does not equal when first type is different', () {
-      expect(
-          t ==
-              Tuple7<double, String, int, String, int, String, int>(
-                  1.0, 'a', 10, 'b', 100, 'c', 1000),
-          isFalse);
-    });
-
-    test('does not equal when second type is different', () {
-      expect(
-          t ==
-              Tuple7<int, double, int, String, int, String, int>(
-                  1, 1.0, 10, 'b', 100, 'c', 1000),
-          isFalse);
-    });
-
-    test('does not equal when third type is different', () {
-      expect(
-          t ==
-              Tuple7<int, String, double, String, int, String, int>(
-                  1, 'a', 1.0, 'b', 100, 'c', 1000),
-          isFalse);
-    });
-
-    test('does not equal when fourth type is different', () {
-      expect(
-          t ==
-              Tuple7<int, String, int, double, int, String, int>(
-                  1, 'a', 10, 1.0, 100, 'c', 1000),
-          isFalse);
-    });
-
-    test('does not equal when fifth type is different', () {
-      expect(
-          t ==
-              Tuple7<int, String, int, String, double, String, int>(
-                  1, 'a', 10, 'b', 1.0, 'c', 1000),
-          isFalse);
-    });
-
-    test('does not equal when sixth type is different', () {
-      expect(
-          t ==
-              Tuple7<int, String, int, String, int, double, int>(
-                  1, 'a', 10, 'b', 100, 0.0, 0),
-          isFalse);
-    });
-
-    test('does not equal when sixth type is different', () {
-      expect(
-          t ==
-              Tuple7<int, String, int, String, int, String, double>(
-                  1, 'a', 10, 'b', 100, 'c', 0.0),
-          isFalse);
     });
 
     test('equals itself', () {
