@@ -16,7 +16,7 @@ void main() {
 
     group('\'s fromList', () {
       test('throws when items is null', () {
-        expect(() => Tuple2<int, String>.fromList(null), throwsArgumentError);
+        expect(() => Tuple2<int, String>.fromList(null), throwsA(anything));
       });
 
       test('throws when items is empty', () {
@@ -110,7 +110,7 @@ void main() {
     group('\'s fromList', () {
       test('throws when items is null', () {
         expect(
-            () => Tuple3<int, String, int>.fromList(null), throwsArgumentError);
+            () => Tuple3<int, String, int>.fromList(null), throwsA(anything));
       });
 
       test('throws when items is empty', () {
@@ -222,7 +222,7 @@ void main() {
     group('\'s fromList', () {
       test('throws when items is null', () {
         expect(() => Tuple4<int, String, int, String>.fromList(null),
-            throwsArgumentError);
+            throwsA(anything));
       });
 
       test('throws when items is empty', () {
@@ -360,7 +360,7 @@ void main() {
     group('\'s fromList', () {
       test('throws when items is null', () {
         expect(() => Tuple5<int, String, int, String, int>.fromList(null),
-            throwsArgumentError);
+            throwsA(anything));
       });
 
       test('throws when items is empty', () {
@@ -534,7 +534,7 @@ void main() {
       test('throws when items is null', () {
         expect(
             () => Tuple6<int, String, int, String, int, String>.fromList(null),
-            throwsArgumentError);
+            throwsA(anything));
       });
 
       test('throws when items is empty', () {
@@ -754,7 +754,7 @@ void main() {
         expect(
             () => Tuple7<int, String, int, String, int, String, int>.fromList(
                 null),
-            throwsArgumentError);
+            throwsA(anything));
       });
 
       test('throws when items is empty', () {
