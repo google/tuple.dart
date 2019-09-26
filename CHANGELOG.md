@@ -1,5 +1,6 @@
 ## 1.0.3
    * Require Dart 2.0.0.
+   * Fixed Tuple7's operator==.
 
 ## 1.0.2
    * Prepare for Dart 2 stable.
