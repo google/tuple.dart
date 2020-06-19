@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/dart-lang/tuple.svg)](https://travis-ci.org/dart-lang/tuple/)
+[![Build Status](https://travis-ci.org/google/tuple.dart.svg)](https://travis-ci.org/google/tuple.dart/)
 
 ## Usage example
 
