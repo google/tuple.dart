@@ -2,6 +2,8 @@
 // file for details. All rights reserved. Use of this source code is governed
 // by a BSD-style license that can be found in the LICENSE file.
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:test/test.dart';
 import 'package:tuple/tuple.dart';
 
@@ -54,7 +56,7 @@ void main() {
       test('returns fixed list by default', () {
         final list = t.toList();
         expect(list, orderedEquals([1, 'a']));
-        expect(() => list.add(1), throwsA(TypeMatcher<UnsupportedError>()));
+        expect(() => list.add(1), throwsA(isA<UnsupportedError>()));
       });
 
       test('returns growable list when told so', () {
@@ -165,7 +167,7 @@ void main() {
       test('returns fixed list by default', () {
         final list = t.toList();
         expect(list, orderedEquals([1, 'a', 10]));
-        expect(() => list.add(1), throwsA(TypeMatcher<UnsupportedError>()));
+        expect(() => list.add(1), throwsA(isA<UnsupportedError>()));
       });
 
       test('returns growable list when told so', () {
@@ -298,7 +300,7 @@ void main() {
       test('returns fixed list by default', () {
         final list = t.toList();
         expect(list, orderedEquals([1, 'a', 10, 'b']));
-        expect(() => list.add(1), throwsA(TypeMatcher<UnsupportedError>()));
+        expect(() => list.add(1), throwsA(isA<UnsupportedError>()));
       });
 
       test('returns growable list when told so', () {
@@ -463,7 +465,7 @@ void main() {
       test('returns fixed list by default', () {
         final list = t.toList();
         expect(list, orderedEquals([1, 'a', 10, 'b', 100]));
-        expect(() => list.add(1), throwsA(TypeMatcher<UnsupportedError>()));
+        expect(() => list.add(1), throwsA(isA<UnsupportedError>()));
       });
 
       test('returns growable list when told so', () {
@@ -672,7 +674,7 @@ void main() {
       test('returns fixed list by default', () {
         final list = t.toList();
         expect(list, orderedEquals([1, 'a', 10, 'b', 100, 'c']));
-        expect(() => list.add(1), throwsA(TypeMatcher<UnsupportedError>()));
+        expect(() => list.add(1), throwsA(isA<UnsupportedError>()));
       });
 
       test('returns growable list when told so', () {
@@ -916,7 +918,7 @@ void main() {
       test('returns fixed list by default', () {
         final list = t.toList();
         expect(list, orderedEquals([1, 'a', 10, 'b', 100, 'c', 1000]));
-        expect(() => list.add(1), throwsA(TypeMatcher<UnsupportedError>()));
+        expect(() => list.add(1), throwsA(isA<UnsupportedError>()));
       });
 
       test('returns growable list when told so', () {

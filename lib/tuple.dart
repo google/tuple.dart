@@ -45,14 +45,10 @@ class Tuple2<T1, T2> {
   }
 
   /// Returns a tuple with the first item set to the specified value.
-  Tuple2<T1, T2> withItem1(T1 v) {
-    return Tuple2<T1, T2>(v, item2);
-  }
+  Tuple2<T1, T2> withItem1(T1 v) => Tuple2<T1, T2>(v, item2);
 
   /// Returns a tuple with the second item set to the specified value.
-  Tuple2<T1, T2> withItem2(T2 v) {
-    return Tuple2<T1, T2>(item1, v);
-  }
+  Tuple2<T1, T2> withItem2(T2 v) => Tuple2<T1, T2>(item1, v);
 
   /// Creates a [List] containing the items of this [Tuple2].
   ///
@@ -65,7 +61,7 @@ class Tuple2<T1, T2> {
   String toString() => '[$item1, $item2]';
 
   @override
-  bool operator ==(other) =>
+  bool operator ==(Object other) =>
       other is Tuple2 && other.item1 == item1 && other.item2 == item2;
 
   @override
@@ -96,19 +92,13 @@ class Tuple3<T1, T2, T3> {
   }
 
   /// Returns a tuple with the first item set to the specified value.
-  Tuple3<T1, T2, T3> withItem1(T1 v) {
-    return Tuple3<T1, T2, T3>(v, item2, item3);
-  }
+  Tuple3<T1, T2, T3> withItem1(T1 v) => Tuple3<T1, T2, T3>(v, item2, item3);
 
   /// Returns a tuple with the second item set to the specified value.
-  Tuple3<T1, T2, T3> withItem2(T2 v) {
-    return Tuple3<T1, T2, T3>(item1, v, item3);
-  }
+  Tuple3<T1, T2, T3> withItem2(T2 v) => Tuple3<T1, T2, T3>(item1, v, item3);
 
   /// Returns a tuple with the third item set to the specified value.
-  Tuple3<T1, T2, T3> withItem3(T3 v) {
-    return Tuple3<T1, T2, T3>(item1, item2, v);
-  }
+  Tuple3<T1, T2, T3> withItem3(T3 v) => Tuple3<T1, T2, T3>(item1, item2, v);
 
   /// Creates a [List] containing the items of this [Tuple3].
   ///
@@ -121,7 +111,7 @@ class Tuple3<T1, T2, T3> {
   String toString() => '[$item1, $item2, $item3]';
 
   @override
-  bool operator ==(other) =>
+  bool operator ==(Object other) =>
       other is Tuple3 &&
       other.item1 == item1 &&
       other.item2 == item2 &&
@@ -159,24 +149,20 @@ class Tuple4<T1, T2, T3, T4> {
   }
 
   /// Returns a tuple with the first item set to the specified value.
-  Tuple4<T1, T2, T3, T4> withItem1(T1 v) {
-    return Tuple4<T1, T2, T3, T4>(v, item2, item3, item4);
-  }
+  Tuple4<T1, T2, T3, T4> withItem1(T1 v) =>
+      Tuple4<T1, T2, T3, T4>(v, item2, item3, item4);
 
   /// Returns a tuple with the second item set to the specified value.
-  Tuple4<T1, T2, T3, T4> withItem2(T2 v) {
-    return Tuple4<T1, T2, T3, T4>(item1, v, item3, item4);
-  }
+  Tuple4<T1, T2, T3, T4> withItem2(T2 v) =>
+      Tuple4<T1, T2, T3, T4>(item1, v, item3, item4);
 
   /// Returns a tuple with the third item set to the specified value.
-  Tuple4<T1, T2, T3, T4> withItem3(T3 v) {
-    return Tuple4<T1, T2, T3, T4>(item1, item2, v, item4);
-  }
+  Tuple4<T1, T2, T3, T4> withItem3(T3 v) =>
+      Tuple4<T1, T2, T3, T4>(item1, item2, v, item4);
 
   /// Returns a tuple with the fourth item set to the specified value.
-  Tuple4<T1, T2, T3, T4> withItem4(T4 v) {
-    return Tuple4<T1, T2, T3, T4>(item1, item2, item3, v);
-  }
+  Tuple4<T1, T2, T3, T4> withItem4(T4 v) =>
+      Tuple4<T1, T2, T3, T4>(item1, item2, item3, v);
 
   /// Creates a [List] containing the items of this [Tuple4].
   ///
@@ -189,7 +175,7 @@ class Tuple4<T1, T2, T3, T4> {
   String toString() => '[$item1, $item2, $item3, $item4]';
 
   @override
-  bool operator ==(other) =>
+  bool operator ==(Object other) =>
       other is Tuple4 &&
       other.item1 == item1 &&
       other.item2 == item2 &&
@@ -232,29 +218,24 @@ class Tuple5<T1, T2, T3, T4, T5> {
   }
 
   /// Returns a tuple with the first item set to the specified value.
-  Tuple5<T1, T2, T3, T4, T5> withItem1(T1 v) {
-    return Tuple5<T1, T2, T3, T4, T5>(v, item2, item3, item4, item5);
-  }
+  Tuple5<T1, T2, T3, T4, T5> withItem1(T1 v) =>
+      Tuple5<T1, T2, T3, T4, T5>(v, item2, item3, item4, item5);
 
   /// Returns a tuple with the second item set to the specified value.
-  Tuple5<T1, T2, T3, T4, T5> withItem2(T2 v) {
-    return Tuple5<T1, T2, T3, T4, T5>(item1, v, item3, item4, item5);
-  }
+  Tuple5<T1, T2, T3, T4, T5> withItem2(T2 v) =>
+      Tuple5<T1, T2, T3, T4, T5>(item1, v, item3, item4, item5);
 
   /// Returns a tuple with the third item set to the specified value.
-  Tuple5<T1, T2, T3, T4, T5> withItem3(T3 v) {
-    return Tuple5<T1, T2, T3, T4, T5>(item1, item2, v, item4, item5);
-  }
+  Tuple5<T1, T2, T3, T4, T5> withItem3(T3 v) =>
+      Tuple5<T1, T2, T3, T4, T5>(item1, item2, v, item4, item5);
 
   /// Returns a tuple with the fourth item set to the specified value.
-  Tuple5<T1, T2, T3, T4, T5> withItem4(T4 v) {
-    return Tuple5<T1, T2, T3, T4, T5>(item1, item2, item3, v, item5);
-  }
+  Tuple5<T1, T2, T3, T4, T5> withItem4(T4 v) =>
+      Tuple5<T1, T2, T3, T4, T5>(item1, item2, item3, v, item5);
 
   /// Returns a tuple with the fifth item set to the specified value.
-  Tuple5<T1, T2, T3, T4, T5> withItem5(T5 v) {
-    return Tuple5<T1, T2, T3, T4, T5>(item1, item2, item3, item4, v);
-  }
+  Tuple5<T1, T2, T3, T4, T5> withItem5(T5 v) =>
+      Tuple5<T1, T2, T3, T4, T5>(item1, item2, item3, item4, v);
 
   /// Creates a [List] containing the items of this [Tuple5].
   ///
@@ -267,7 +248,7 @@ class Tuple5<T1, T2, T3, T4, T5> {
   String toString() => '[$item1, $item2, $item3, $item4, $item5]';
 
   @override
-  bool operator ==(other) =>
+  bool operator ==(Object other) =>
       other is Tuple5 &&
       other.item1 == item1 &&
       other.item2 == item2 &&
@@ -320,34 +301,28 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
   }
 
   /// Returns a tuple with the first item set to the specified value.
-  Tuple6<T1, T2, T3, T4, T5, T6> withItem1(T1 v) {
-    return Tuple6<T1, T2, T3, T4, T5, T6>(v, item2, item3, item4, item5, item6);
-  }
+  Tuple6<T1, T2, T3, T4, T5, T6> withItem1(T1 v) =>
+      Tuple6<T1, T2, T3, T4, T5, T6>(v, item2, item3, item4, item5, item6);
 
   /// Returns a tuple with the second item set to the specified value.
-  Tuple6<T1, T2, T3, T4, T5, T6> withItem2(T2 v) {
-    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, v, item3, item4, item5, item6);
-  }
+  Tuple6<T1, T2, T3, T4, T5, T6> withItem2(T2 v) =>
+      Tuple6<T1, T2, T3, T4, T5, T6>(item1, v, item3, item4, item5, item6);
 
   /// Returns a tuple with the third item set to the specified value.
-  Tuple6<T1, T2, T3, T4, T5, T6> withItem3(T3 v) {
-    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, v, item4, item5, item6);
-  }
+  Tuple6<T1, T2, T3, T4, T5, T6> withItem3(T3 v) =>
+      Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, v, item4, item5, item6);
 
   /// Returns a tuple with the fourth item set to the specified value.
-  Tuple6<T1, T2, T3, T4, T5, T6> withItem4(T4 v) {
-    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, item3, v, item5, item6);
-  }
+  Tuple6<T1, T2, T3, T4, T5, T6> withItem4(T4 v) =>
+      Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, item3, v, item5, item6);
 
   /// Returns a tuple with the fifth item set to the specified value.
-  Tuple6<T1, T2, T3, T4, T5, T6> withItem5(T5 v) {
-    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, item3, item4, v, item6);
-  }
+  Tuple6<T1, T2, T3, T4, T5, T6> withItem5(T5 v) =>
+      Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, item3, item4, v, item6);
 
   /// Returns a tuple with the sixth item set to the specified value.
-  Tuple6<T1, T2, T3, T4, T5, T6> withItem6(T6 v) {
-    return Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, item3, item4, item5, v);
-  }
+  Tuple6<T1, T2, T3, T4, T5, T6> withItem6(T6 v) =>
+      Tuple6<T1, T2, T3, T4, T5, T6>(item1, item2, item3, item4, item5, v);
 
   /// Creates a [List] containing the items of this [Tuple5].
   ///
@@ -360,7 +335,7 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
   String toString() => '[$item1, $item2, $item3, $item4, $item5, $item6]';
 
   @override
-  bool operator ==(other) =>
+  bool operator ==(Object other) =>
       other is Tuple6 &&
       other.item1 == item1 &&
       other.item2 == item2 &&
@@ -424,46 +399,39 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
   }
 
   /// Returns a tuple with the first item set to the specified value.
-  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem1(T1 v) {
-    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
-        v, item2, item3, item4, item5, item6, item7);
-  }
+  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem1(T1 v) =>
+      Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+          v, item2, item3, item4, item5, item6, item7);
 
   /// Returns a tuple with the second item set to the specified value.
-  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem2(T2 v) {
-    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
-        item1, v, item3, item4, item5, item6, item7);
-  }
+  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem2(T2 v) =>
+      Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+          item1, v, item3, item4, item5, item6, item7);
 
   /// Returns a tuple with the third item set to the specified value.
-  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem3(T3 v) {
-    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
-        item1, item2, v, item4, item5, item6, item7);
-  }
+  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem3(T3 v) =>
+      Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+          item1, item2, v, item4, item5, item6, item7);
 
   /// Returns a tuple with the fourth item set to the specified value.
-  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem4(T4 v) {
-    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
-        item1, item2, item3, v, item5, item6, item7);
-  }
+  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem4(T4 v) =>
+      Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+          item1, item2, item3, v, item5, item6, item7);
 
   /// Returns a tuple with the fifth item set to the specified value.
-  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem5(T5 v) {
-    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
-        item1, item2, item3, item4, v, item6, item7);
-  }
+  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem5(T5 v) =>
+      Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+          item1, item2, item3, item4, v, item6, item7);
 
   /// Returns a tuple with the sixth item set to the specified value.
-  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem6(T6 v) {
-    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
-        item1, item2, item3, item4, item5, v, item7);
-  }
+  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem6(T6 v) =>
+      Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+          item1, item2, item3, item4, item5, v, item7);
 
   /// Returns a tuple with the seventh item set to the specified value.
-  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem7(T7 v) {
-    return Tuple7<T1, T2, T3, T4, T5, T6, T7>(
-        item1, item2, item3, item4, item5, item6, v);
-  }
+  Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem7(T7 v) =>
+      Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+          item1, item2, item3, item4, item5, item6, v);
 
   /// Creates a [List] containing the items of this [Tuple5].
   ///
@@ -478,7 +446,7 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
       '[$item1, $item2, $item3, $item4, $item5, $item6, $item7]';
 
   @override
-  bool operator ==(other) =>
+  bool operator ==(Object other) =>
       other is Tuple7 &&
       other.item1 == item1 &&
       other.item2 == item2 &&
