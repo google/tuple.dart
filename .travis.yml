@@ -5,7 +5,7 @@ dart:
   - dev
 
 dart_task:
-  - test:
+  - test: -p vm,chrome
   - dartanalyzer: --fatal-infos --fatal-warnings .
 
 matrix:
