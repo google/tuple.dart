@@ -65,10 +65,6 @@ void main() {
       expect('$t', '[1, a]');
     });
 
-    test('does not equal null', () {
-      expect(t == null, isFalse);
-    });
-
     test('does not equal when first value is different', () {
       expect(t == t.withItem1(2), isFalse);
     });
@@ -169,10 +165,6 @@ void main() {
 
     test('converts to proper string', () {
       expect('$t', '[1, a, 10]');
-    });
-
-    test('does not equal null', () {
-      expect(t == null, isFalse);
     });
 
     test('does not equal when first value is different', () {
@@ -297,10 +289,6 @@ void main() {
 
     test('converts to proper string', () {
       expect('$t', '[1, a, 10, b]');
-    });
-
-    test('does not equal null', () {
-      expect(t == null, isFalse);
     });
 
     test('does not equal when first value is different', () {
@@ -457,10 +445,6 @@ void main() {
 
     test('converts to proper string', () {
       expect('$t', '[1, a, 10, b, 100]');
-    });
-
-    test('does not equal null', () {
-      expect(t == null, isFalse);
     });
 
     test('does not equal when first value is different', () {
@@ -660,10 +644,6 @@ void main() {
 
     test('converts to proper string', () {
       expect('$t', '[1, a, 10, b, 100, c]');
-    });
-
-    test('does not equal null', () {
-      expect(t == null, isFalse);
     });
 
     test('does not equal when first value is different', () {
@@ -897,10 +877,6 @@ void main() {
 
     test('converts to proper string', () {
       expect('$t', '[1, a, 10, b, 100, c, 1000]');
-    });
-
-    test('does not equal null', () {
-      expect(t == null, isFalse);
     });
 
     test('does not equal when first value is different', () {
