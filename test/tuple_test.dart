@@ -17,10 +17,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(() => Tuple2<int, String>.fromList(null), throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(() => Tuple2<int, String>.fromList([]), throwsArgumentError);
       });
@@ -110,11 +106,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(
-            () => Tuple3<int, String, int>.fromList(null), throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(
             () => Tuple3<int, String, int>.fromList([]), throwsArgumentError);
@@ -222,11 +213,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(() => Tuple4<int, String, int, String>.fromList(null),
-            throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(() => Tuple4<int, String, int, String>.fromList([]),
             throwsArgumentError);
@@ -360,11 +346,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(() => Tuple5<int, String, int, String, int>.fromList(null),
-            throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(() => Tuple5<int, String, int, String, int>.fromList([]),
             throwsArgumentError);
@@ -533,12 +514,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(
-            () => Tuple6<int, String, int, String, int, String>.fromList(null),
-            throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(() => Tuple6<int, String, int, String, int, String>.fromList([]),
             throwsArgumentError);
@@ -752,13 +727,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(
-            () => Tuple7<int, String, int, String, int, String, int>.fromList(
-                null),
-            throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(
             () =>
