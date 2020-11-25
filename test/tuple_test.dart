@@ -17,10 +17,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(() => Tuple2<int, String>.fromList(null), throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(() => Tuple2<int, String>.fromList([]), throwsArgumentError);
       });
@@ -69,10 +65,6 @@ void main() {
       expect('$t', '[1, a]');
     });
 
-    test('does not equal null', () {
-      expect(t == null, isFalse);
-    });
-
     test('does not equal when first value is different', () {
       expect(t == t.withItem1(2), isFalse);
     });
@@ -110,11 +102,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(
-            () => Tuple3<int, String, int>.fromList(null), throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(
             () => Tuple3<int, String, int>.fromList([]), throwsArgumentError);
@@ -180,10 +167,6 @@ void main() {
       expect('$t', '[1, a, 10]');
     });
 
-    test('does not equal null', () {
-      expect(t == null, isFalse);
-    });
-
     test('does not equal when first value is different', () {
       expect(t == t.withItem1(2), isFalse);
     });
@@ -222,11 +205,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(() => Tuple4<int, String, int, String>.fromList(null),
-            throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(() => Tuple4<int, String, int, String>.fromList([]),
             throwsArgumentError);
@@ -313,10 +291,6 @@ void main() {
       expect('$t', '[1, a, 10, b]');
     });
 
-    test('does not equal null', () {
-      expect(t == null, isFalse);
-    });
-
     test('does not equal when first value is different', () {
       expect(t == t.withItem1(2), isFalse);
     });
@@ -360,11 +334,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(() => Tuple5<int, String, int, String, int>.fromList(null),
-            throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(() => Tuple5<int, String, int, String, int>.fromList([]),
             throwsArgumentError);
@@ -478,10 +447,6 @@ void main() {
       expect('$t', '[1, a, 10, b, 100]');
     });
 
-    test('does not equal null', () {
-      expect(t == null, isFalse);
-    });
-
     test('does not equal when first value is different', () {
       expect(t == t.withItem1(2), isFalse);
     });
@@ -533,12 +498,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(
-            () => Tuple6<int, String, int, String, int, String>.fromList(null),
-            throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(() => Tuple6<int, String, int, String, int, String>.fromList([]),
             throwsArgumentError);
@@ -687,10 +646,6 @@ void main() {
       expect('$t', '[1, a, 10, b, 100, c]');
     });
 
-    test('does not equal null', () {
-      expect(t == null, isFalse);
-    });
-
     test('does not equal when first value is different', () {
       expect(t == t.withItem1(2), isFalse);
     });
@@ -752,13 +707,6 @@ void main() {
     });
 
     group('\'s fromList', () {
-      test('throws when items is null', () {
-        expect(
-            () => Tuple7<int, String, int, String, int, String, int>.fromList(
-                null),
-            throwsA(anything));
-      });
-
       test('throws when items is empty', () {
         expect(
             () =>
@@ -929,10 +877,6 @@ void main() {
 
     test('converts to proper string', () {
       expect('$t', '[1, a, 10, b, 100, c, 1000]');
-    });
-
-    test('does not equal null', () {
-      expect(t == null, isFalse);
     });
 
     test('does not equal when first value is different', () {
