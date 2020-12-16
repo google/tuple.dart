@@ -2,7 +2,7 @@ name: tuple
 version: 2.0.0-nullsafety.0
 
 description: Tuple data structure
-homepage: https://github.com/google/tuple.dart
+repository: https://github.com/google/tuple.dart
 
 environment:
   sdk: '>=2.12.0-0 <3.0.0'
