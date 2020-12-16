@@ -1,4 +1,4 @@
-name: Dart
+name: ci
 
 on:
   schedule:
@@ -9,27 +9,18 @@ on:
     branches:
       - master
 
+env:
+  PUB_ENVIRONMENT: bot.github
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    container:
-      image:  google/dart:dev
-
     steps:
       - uses: actions/checkout@v2
-
-      - name: Print Dart version
-        run: dart --version
-
-      - name: pub get
-        run: pub get
-
-      - name: dart format
-        run: dart format --output=none --set-exit-if-changed .
-
-      - name: dart analyze
-        run: dart analyze --fatal-infos
-
-      - name: dart test
-        run: dart test
+      - uses: dart-lang/setup-dart@v0.1
+        with:
+          channel: dev
+      - run: pub get
+      - run: dart format --output=none --set-exit-if-changed .
+      - run: dart analyze --fatal-infos
+      - run: dart test
