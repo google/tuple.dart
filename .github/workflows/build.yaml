@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  schedule:
+    # “At 00:00 (UTC) on Sunday.”
+    - cron: '0 0 * * 0'
+  pull_request:
+  push:
+    branches:
+      - master
+
+env:
+  PUB_ENVIRONMENT: bot.github
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dart-lang/setup-dart@v0.1
+        with:
+          channel: dev
+      - run: pub get
+      - run: dart format --output=none --set-exit-if-changed .
+      - run: dart analyze --fatal-infos
+      - run: dart test
