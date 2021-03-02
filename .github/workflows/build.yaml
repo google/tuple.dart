@@ -20,7 +20,7 @@ jobs:
       - uses: dart-lang/setup-dart@v0.1
         with:
           channel: dev
-      - run: pub get
+      - run: dart pub get
       - run: dart format --output=none --set-exit-if-changed .
       - run: dart analyze --fatal-infos
       - run: dart test

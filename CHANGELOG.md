@@ -1,7 +1,11 @@
+## 2.0.0
+
+- Stable null safety release.
+
 ## 2.0.0-nullsafety.0
 
-- Upgrade to sound null safety
-- Require Dart 2.12.0-0
+- Upgrade to sound null safety.
+- Require Dart 2.12.0-0.
 
 ## 1.0.3
 
