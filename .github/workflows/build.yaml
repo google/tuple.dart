@@ -15,11 +15,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        sdk: [dev, 2.12.0]
     steps:
       - uses: actions/checkout@v2
-      - uses: dart-lang/setup-dart@v0.1
+      - uses: dart-lang/setup-dart@v1.0
         with:
-          channel: dev
+          sdk: ${{ matrix.sdk }}
       - run: pub get
       - run: dart format --output=none --set-exit-if-changed .
       - run: dart analyze --fatal-infos
