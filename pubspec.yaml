@@ -1,5 +1,5 @@
 name: tuple
-version: 2.0.0
+version: 2.0.1
 
 description: Tuple data structure
 repository: https://github.com/google/tuple.dart
