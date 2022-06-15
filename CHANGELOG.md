@@ -1,3 +1,7 @@
+## 2.0.1
+
+- Add Tuple8 class.
+
 ## 2.0.0
 
 - Stable null safety release.
