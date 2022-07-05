@@ -1011,56 +1011,56 @@ void main() {
       test('throws when first value is not an int', () {
         expect(
             () => Tuple8<int, String, int, String, int, String, int,
-                String>.fromList(['z', 'a', 2, 'b', 3, 'c', 4]),
+                String>.fromList(['z', 'a', 2, 'b', 3, 'c', 4, 'd']),
             throwsA(anything));
       });
 
       test('throws when second value is not a string', () {
         expect(
             () => Tuple8<int, String, int, String, int, String, int,
-                String>.fromList([1, 0, 2, 'b', 3, 'c', 4]),
+                String>.fromList([1, 0, 2, 'b', 3, 'c', 4, 'd']),
             throwsA(anything));
       });
 
       test('throws when third value is not an int', () {
         expect(
             () => Tuple8<int, String, int, String, int, String, int,
-                String>.fromList([1, 'a', 'z', 'b', 3, 'c', 4]),
+                String>.fromList([1, 'a', 'z', 'b', 3, 'c', 4, 'd']),
             throwsA(anything));
       });
 
       test('throws when fourth value is not a string', () {
         expect(
             () => Tuple8<int, String, int, String, int, String, int,
-                String>.fromList([1, 'a', 2, 0, 3, 'c', 4]),
+                String>.fromList([1, 'a', 2, 0, 3, 'c', 4, 'd']),
             throwsA(anything));
       });
 
       test('throws when fifth value is not an int', () {
         expect(
             () => Tuple8<int, String, int, String, int, String, int,
-                String>.fromList([1, 'a', 2, 'b', 'z', 'c', 4]),
+                String>.fromList([1, 'a', 2, 'b', 'z', 'c', 4, 'd']),
             throwsA(anything));
       });
 
       test('throws when sixth value is not a string', () {
         expect(
             () => Tuple8<int, String, int, String, int, String, int,
-                String>.fromList([1, 'a', 2, 'b', 3, 4, 5]),
+                String>.fromList([1, 'a', 2, 'b', 3, 0, 4, 'd']),
             throwsA(anything));
       });
 
       test('throws when seventh value is not an int', () {
         expect(
             () => Tuple8<int, String, int, String, int, String, int,
-                String>.fromList([1, 'a', 2, 'b', 3, 'c', 'd']),
+                String>.fromList([1, 'a', 2, 'b', 3, 'c', 'z', 'd']),
             throwsA(anything));
       });
 
-      test('throws when seventh value is not an String', () {
+      test('throws when eight value is not an String', () {
         expect(
             () => Tuple8<int, String, int, String, int, String, int,
-                String>.fromList([1, 'a', 2, 'b', 3, 'c', 4, 5]),
+                String>.fromList([1, 'a', 2, 'b', 3, 'c', 4, 0]),
             throwsA(anything));
       });
     });
@@ -1189,6 +1189,300 @@ void main() {
       expect(
           map[Tuple8<int, String, int, String, int, String, int, String>(
               1, 'a', 10, 'b', 100, 'c', 1000, 'd')],
+          101);
+    });
+  });
+
+  group(Tuple9, () {
+    final t = Tuple9<int, String, int, String, int, String, int, String, int>(
+        1, 'a', 10, 'b', 100, 'c', 1000, 'd', 10000);
+
+    test('has the correct items', () {
+      expect(t.item1, 1);
+      expect(t.item2, 'a');
+      expect(t.item3, 10);
+      expect(t.item4, 'b');
+      expect(t.item5, 100);
+      expect(t.item6, 'c');
+      expect(t.item7, 1000);
+      expect(t.item8, 'd');
+      expect(t.item9, 10000);
+    });
+
+    group('\'s fromList', () {
+      test('throws when items is empty', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([]),
+            throwsArgumentError);
+      });
+
+      test('throws when items has one value', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1]),
+            throwsArgumentError);
+      });
+
+      test('throws when items has two values', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a']),
+            throwsArgumentError);
+      });
+
+      test('throws when items has three values', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2]),
+            throwsArgumentError);
+      });
+
+      test('throws when items has four values', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b']),
+            throwsArgumentError);
+      });
+
+      test('throws when items has five values', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 3]),
+            throwsArgumentError);
+      });
+
+      test('throws when items has six values', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 3, 'c']),
+            throwsArgumentError);
+      });
+
+      test('throws when items has seven values', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 3, 'c', 4]),
+            throwsArgumentError);
+      });
+
+      test('throws when items has eight values', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 3, 'c', 4, 'd']),
+            throwsArgumentError);
+      });
+
+      test('throws when items has ten values', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 3, 'c', 4, 'd', 5, 'e']),
+            throwsArgumentError);
+      });
+
+      test('throws when first value is not an int', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList(['z', 'a', 2, 'b', 3, 'c', 4, 'd', 5]),
+            throwsA(anything));
+      });
+
+      test('throws when second value is not a string', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 0, 2, 'b', 3, 'c', 4, 'd', 5]),
+            throwsA(anything));
+      });
+
+      test('throws when third value is not an int', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 'z', 'b', 3, 'c', 4, 'd', 5]),
+            throwsA(anything));
+      });
+
+      test('throws when fourth value is not a string', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 0, 3, 'c', 4, 'd', 5]),
+            throwsA(anything));
+      });
+
+      test('throws when fifth value is not an int', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 'z', 'c', 4, 'd', 5]),
+            throwsA(anything));
+      });
+
+      test('throws when sixth value is not a string', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 3, 0, 4, 'd', 5]),
+            throwsA(anything));
+      });
+
+      test('throws when seventh value is not an int', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 3, 'c', 'z', 'd', 5]),
+            throwsA(anything));
+      });
+
+      test('throws when eight value is not an String', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 3, 'c', 4, 0, 5]),
+            throwsA(anything));
+      });
+
+      test('throws when ninth value is not an int', () {
+        expect(
+            () => Tuple9<int, String, int, String, int, String, int, String,
+                int>.fromList([1, 'a', 2, 'b', 3, 'c', 4, 'd', 'z']),
+            throwsA(anything));
+      });
+    });
+
+    test('returns correct tuple from withItem1', () {
+      expect(
+          t.withItem1(2),
+          Tuple9<int, String, int, String, int, String, int, String, int>(
+              2, 'a', 10, 'b', 100, 'c', 1000, 'd', 10000));
+    });
+
+    test('returns correct tuple from withItem2', () {
+      expect(
+          t.withItem2('b'),
+          Tuple9<int, String, int, String, int, String, int, String, int>(
+              1, 'b', 10, 'b', 100, 'c', 1000, 'd', 10000));
+    });
+
+    test('returns correct tuple from withItem3', () {
+      expect(
+          t.withItem3(100),
+          Tuple9<int, String, int, String, int, String, int, String, int>(
+              1, 'a', 100, 'b', 100, 'c', 1000, 'd', 10000));
+    });
+
+    test('returns correct tuple from withItem4', () {
+      expect(
+          t.withItem4('c'),
+          Tuple9<int, String, int, String, int, String, int, String, int>(
+              1, 'a', 10, 'c', 100, 'c', 1000, 'd', 10000));
+    });
+
+    test('returns correct tuple from withItem5', () {
+      expect(
+          t.withItem5(4),
+          Tuple9<int, String, int, String, int, String, int, String, int>(
+              1, 'a', 10, 'b', 4, 'c', 1000, 'd', 10000));
+    });
+
+    test('returns correct tuple from withItem6', () {
+      expect(
+          t.withItem6('z'),
+          Tuple9<int, String, int, String, int, String, int, String, int>(
+              1, 'a', 10, 'b', 100, 'z', 1000, 'd', 10000));
+    });
+
+    test('returns correct tuple from withItem7', () {
+      expect(
+          t.withItem7(0),
+          Tuple9<int, String, int, String, int, String, int, String, int>(
+              1, 'a', 10, 'b', 100, 'c', 0, 'd', 10000));
+    });
+
+    test('returns correct tuple from withItem8', () {
+      expect(
+          t.withItem8('h'),
+          Tuple9<int, String, int, String, int, String, int, String, int>(
+              1, 'a', 10, 'b', 100, 'c', 1000, 'h', 10000));
+    });
+
+    test('returns correct tuple from withItem9', () {
+      expect(
+          t.withItem9(5),
+          Tuple9<int, String, int, String, int, String, int, String, int>(
+              1, 'a', 10, 'b', 100, 'c', 1000, 'd', 5));
+    });
+
+    group('\'s toList', () {
+      test('returns fixed list by default', () {
+        final list = t.toList();
+        expect(
+          list,
+          orderedEquals([1, 'a', 10, 'b', 100, 'c', 1000, 'd', 10000]),
+        );
+        expect(() => list.add(1), throwsA(isA<UnsupportedError>()));
+      });
+
+      test('returns growable list when told so', () {
+        expect(t.toList(growable: true)..add(1),
+            orderedEquals([1, 'a', 10, 'b', 100, 'c', 1000, 'd', 10000, 1]));
+      });
+    });
+
+    test('converts to proper string', () {
+      expect('$t', '[1, a, 10, b, 100, c, 1000, d, 10000]');
+    });
+
+    test('does not equal when first value is different', () {
+      expect(t == t.withItem1(2), isFalse);
+    });
+
+    test('does not equal when second value is different', () {
+      expect(t == t.withItem2('b'), isFalse);
+    });
+
+    test('does not equal when third value is different', () {
+      expect(t == t.withItem3(100), isFalse);
+    });
+
+    test('does not equal when fourth value is different', () {
+      expect(t == t.withItem4('c'), isFalse);
+    });
+
+    test('does not equal when fifth value is different', () {
+      expect(t == t.withItem5(0), isFalse);
+    });
+
+    test('does not equal when sixth value is different', () {
+      expect(t == t.withItem6('z'), isFalse);
+    });
+
+    test('does not equal when seventh value is different', () {
+      expect(t == t.withItem7(0), isFalse);
+    });
+
+    test('does not equal when eight value is different', () {
+      expect(t == t.withItem8('h'), isFalse);
+    });
+
+    test('does not equal when ninth value is different', () {
+      expect(t == t.withItem9(5), isFalse);
+    });
+
+    test('equals itself', () {
+      expect(t == t, isTrue);
+    });
+
+    test('equals another object with same values', () {
+      expect(
+          t ==
+              Tuple9<int, String, int, String, int, String, int, String, int>(
+                  1, 'a', 10, 'b', 100, 'c', 1000, 'd', 10000),
+          isTrue);
+    });
+
+    test('can be used as a map key', () {
+      final map = <
+          Tuple9<int, String, int, String, int, String, int, String, int>,
+          int>{};
+      map[t] = 101;
+      expect(
+          map[Tuple9<int, String, int, String, int, String, int, String, int>(
+              1, 'a', 10, 'b', 100, 'c', 1000, 'd', 10000)],
           101);
     });
   });

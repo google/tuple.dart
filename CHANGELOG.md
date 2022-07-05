@@ -1,6 +1,7 @@
 ## 2.0.1
 
 - Add Tuple8 class.
+- Add Tuple9 class.
 
 ## 2.0.0
 
