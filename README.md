@@ -1,4 +1,4 @@
-[![Dart](https://github.com/google/tuple.dart/actions/workflows/dart.yaml/badge.svg)](https://github.com/google/tuple.dart/actions/workflows/dart.yaml)
+[![Dart](https://github.com/google/tuple.dart/actions/workflows/build.yaml/badge.svg)](https://github.com/google/tuple.dart/actions/workflows/build.yaml)
 [![Pub](https://img.shields.io/pub/v/tuple.svg)](https://pub.dev/packages/tuple)
 [![package publisher](https://img.shields.io/pub/publisher/tuple.svg)](https://pub.dev/packages/tuple/publisher)
 

@@ -4,10 +4,10 @@ on:
   schedule:
     # “At 00:00 (UTC) on Sunday.”
     - cron: '0 0 * * 0'
-  pull_request:
   push:
-    branches:
-      - master
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 env:
   PUB_ENVIRONMENT: bot.github
