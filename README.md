@@ -1,4 +1,8 @@
-[![ci](https://github.com/google/tuple.dart/workflows/ci/badge.svg?branch=master)](https://github.com/google/tuple.dart/actions?query=branch%3Amaster)
+[![Dart](https://github.com/google/tuple.dart/actions/workflows/dart.yaml/badge.svg)](https://github.com/google/tuple.dart/actions/workflows/dart.yaml)
+[![Pub](https://img.shields.io/pub/v/tuple.svg)](https://pub.dev/packages/tuple)
+[![package publisher](https://img.shields.io/pub/publisher/tuple.svg)](https://pub.dev/packages/tuple/publisher)
+
+A library providing a tuple data structure.
 
 ## Usage example
 

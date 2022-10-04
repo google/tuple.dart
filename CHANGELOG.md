@@ -1,3 +1,9 @@
+## 2.0.1
+
+- Remove the dependency on `package:quiver`.
+- Require Dart 2.14.0.
+- Switch to using `package:lints/recommended.yaml` for analysis.
+
 ## 2.0.0
 
 - Stable null safety release.
