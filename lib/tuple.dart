@@ -22,8 +22,6 @@
 /// ```
 library tuple;
 
-import 'package:quiver/core.dart';
-
 /// Represents a 2-tuple, or pair.
 class Tuple2<T1, T2> {
   /// Returns the first item of the tuple
@@ -65,7 +63,7 @@ class Tuple2<T1, T2> {
       other is Tuple2 && other.item1 == item1 && other.item2 == item2;
 
   @override
-  int get hashCode => hash2(item1.hashCode, item2.hashCode);
+  int get hashCode => Object.hash(item1.hashCode, item2.hashCode);
 }
 
 /// Represents a 3-tuple, or triple.
@@ -118,7 +116,8 @@ class Tuple3<T1, T2, T3> {
       other.item3 == item3;
 
   @override
-  int get hashCode => hash3(item1.hashCode, item2.hashCode, item3.hashCode);
+  int get hashCode =>
+      Object.hash(item1.hashCode, item2.hashCode, item3.hashCode);
 }
 
 /// Represents a 4-tuple, or quadruple.
@@ -183,8 +182,8 @@ class Tuple4<T1, T2, T3, T4> {
       other.item4 == item4;
 
   @override
-  int get hashCode =>
-      hash4(item1.hashCode, item2.hashCode, item3.hashCode, item4.hashCode);
+  int get hashCode => Object.hash(
+      item1.hashCode, item2.hashCode, item3.hashCode, item4.hashCode);
 }
 
 /// Represents a 5-tuple, or quintuple.
@@ -257,7 +256,7 @@ class Tuple5<T1, T2, T3, T4, T5> {
       other.item5 == item5;
 
   @override
-  int get hashCode => hashObjects([
+  int get hashCode => Object.hashAll([
         item1.hashCode,
         item2.hashCode,
         item3.hashCode,
@@ -345,7 +344,7 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
       other.item6 == item6;
 
   @override
-  int get hashCode => hashObjects([
+  int get hashCode => Object.hashAll([
         item1.hashCode,
         item2.hashCode,
         item3.hashCode,
@@ -457,7 +456,7 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
       other.item7 == item7;
 
   @override
-  int get hashCode => hashObjects([
+  int get hashCode => Object.hashAll([
         item1.hashCode,
         item2.hashCode,
         item3.hashCode,

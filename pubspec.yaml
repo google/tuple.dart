@@ -5,10 +5,9 @@ description: Tuple data structure
 repository: https://github.com/google/tuple.dart
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.14.0 <3.0.0'
 
 dependencies:
-  quiver: ^3.0.0
 
 dev_dependencies:
   pedantic: ^1.10.0
