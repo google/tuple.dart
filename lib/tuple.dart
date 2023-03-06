@@ -55,6 +55,8 @@ class Tuple2<T1, T2> {
   List toList({bool growable = false}) =>
       List.from([item1, item2], growable: growable);
 
+  int get length => 2;
+
   @override
   String toString() => '[$item1, $item2]';
 
@@ -104,6 +106,8 @@ class Tuple3<T1, T2, T3> {
   /// if [growable] is true.
   List toList({bool growable = false}) =>
       List.from([item1, item2, item3], growable: growable);
+
+  int get length => 3;
 
   @override
   String toString() => '[$item1, $item2, $item3]';
@@ -169,6 +173,8 @@ class Tuple4<T1, T2, T3, T4> {
   /// if [growable] is true.
   List toList({bool growable = false}) =>
       List.from([item1, item2, item3, item4], growable: growable);
+
+  int get length => 4;
 
   @override
   String toString() => '[$item1, $item2, $item3, $item4]';
@@ -242,6 +248,8 @@ class Tuple5<T1, T2, T3, T4, T5> {
   /// if [growable] is true.
   List toList({bool growable = false}) =>
       List.from([item1, item2, item3, item4, item5], growable: growable);
+
+  int get length => 5;
 
   @override
   String toString() => '[$item1, $item2, $item3, $item4, $item5]';
@@ -329,6 +337,8 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
   /// if [growable] is true.
   List toList({bool growable = false}) =>
       List.from([item1, item2, item3, item4, item5, item6], growable: growable);
+
+  int get length => 6;
 
   @override
   String toString() => '[$item1, $item2, $item3, $item4, $item5, $item6]';
@@ -440,6 +450,8 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
       List.from([item1, item2, item3, item4, item5, item6, item7],
           growable: growable);
 
+  int get length => 7;
+
   @override
   String toString() =>
       '[$item1, $item2, $item3, $item4, $item5, $item6, $item7]';
@@ -465,4 +477,14 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
         item6.hashCode,
         item7.hashCode
       ]);
+}
+
+
+bool isTuple(dynamic obj) {
+  return obj is Tuple2 ||
+      obj is Tuple3 ||
+      obj is Tuple4 ||
+      obj is Tuple5 ||
+      obj is Tuple6 ||
+      obj is Tuple7;
 }
