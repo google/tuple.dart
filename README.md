@@ -13,8 +13,8 @@ the ability to use [Records](https://dart.dev/language/records):
   types, they let you bundle multiple objects into a single object. 
 
 ```dart
-({int a, bool b}) record;
-record = (a: 123, b: true);
+  var record = (123, true);
+  print('${record.$1}: ${record.$2}');
 ```
 
 By and large, Records serve the same use cases that `package:tuple` had been
