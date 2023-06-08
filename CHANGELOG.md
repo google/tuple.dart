@@ -1,3 +1,9 @@
+## 2.0.2
+
+- Update the readme to indicate that this package is considered feature
+  complete.
+- Require Dart 2.17.
+
 ## 2.0.1
 
 - Remove the dependency on `package:quiver`.

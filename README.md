@@ -4,6 +4,25 @@
 
 A library providing a tuple data structure.
 
+## Status - complete
+
+We consider this package to be feature complete. With Dart 3.0, users now have
+the ability to use [Records](https://dart.dev/language/records):
+
+> Records are an anonymous, immutable, aggregate type. Like other collection
+  types, they let you bundle multiple objects into a single object. 
+
+```dart
+({int a, bool b}) record;
+record = (a: 123, b: true);
+```
+
+By and large, Records serve the same use cases that `package:tuple` had been
+used for. New users coming to this package should likely look at using Dart
+Records instead. Existing uses of package:tuple will continue to work, however
+we don't intend to enhance the functionality of this package; we will continue
+to maintain this package from the POV of bug fixes.
+
 ## Usage example
 
 ```dart
